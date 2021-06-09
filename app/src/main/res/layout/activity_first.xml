@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/design_default_color_primary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/white" />
+
+    <Button
+        android:id="@+id/btnTask1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#388e3c"
+        android:text="Task1"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintVertical_bias="0.45" />
+
+    <TextView
+        android:id="@+id/tvSpentTime1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:text="St: 0"
+        android:textColor="#0d47a1"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/btnTask1"
+        app:layout_constraintStart_toEndOf="@id/btnTask1"
+        app:layout_constraintTop_toTopOf="@id/btnTask1" />
+
+    <ProgressBar
+        android:id="@+id/progress1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/btnTask1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvSpentTime1"
+        app:layout_constraintTop_toTopOf="@id/btnTask1" />
+
+    <Button
+        android:id="@+id/btnTask2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#ff7043"
+        android:text="Task2"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnTask1" />
+
+    <TextView
+        android:id="@+id/tvSpentTime2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:text="St: 0"
+        android:textColor="#0d47a1"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/btnTask2"
+        app:layout_constraintStart_toEndOf="@id/btnTask2"
+        app:layout_constraintTop_toTopOf="@id/btnTask2" />
+
+    <ProgressBar
+        android:id="@+id/progress2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/btnTask2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvSpentTime2"
+        app:layout_constraintTop_toTopOf="@id/btnTask2" />
+
+    <Button
+        android:id="@+id/btnTask3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#03a9f4"
+        android:text="Task3"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnTask2" />
+
+    <TextView
+        android:id="@+id/tvSpentTime3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:text="St: 0"
+        android:textColor="#0d47a1"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/btnTask3"
+        app:layout_constraintStart_toEndOf="@id/btnTask3"
+        app:layout_constraintTop_toTopOf="@id/btnTask3" />
+
+    <ProgressBar
+        android:id="@+id/progress3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/btnTask3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvSpentTime3"
+        app:layout_constraintTop_toTopOf="@id/btnTask3" />
+
+    <Button
+        android:id="@+id/btnWithContextTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#0097a7"
+        android:text="Run WithContext"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@id/btnAsyncTask"
+        app:layout_constraintEnd_toStartOf="@id/btnAsyncTask"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnTask3" />
+
+    <TextView
+        android:id="@+id/tvTimeWithContext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Total: 0"
+        android:textColor="#1b5e20"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/btnWithContextTask"
+        app:layout_constraintStart_toStartOf="@id/btnWithContextTask"
+        app:layout_constraintTop_toBottomOf="@id/btnWithContextTask" />
+
+    <Button
+        android:id="@+id/btnAsyncTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#5c6bc0"
+        android:text="Run Async"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@id/btnWithContextTask"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnWithContextTask"
+        app:layout_constraintTop_toTopOf="@id/btnWithContextTask" />
+
+    <TextView
+        android:id="@+id/tvTimeAsync"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Total: 0"
+        android:textColor="#0d47a1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/btnAsyncTask"
+        app:layout_constraintStart_toStartOf="@id/btnAsyncTask"
+        app:layout_constraintTop_toBottomOf="@id/btnAsyncTask" />
+
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="60dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/btnWithContextTask" />
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/viewLine">
+
+        <RadioButton
+            android:id="@+id/rb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="RunBlocking"
+            android:textColor="#db5a6b"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RunLaunch"
+            android:textColor="#0009ff"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rb3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RunException"
+            android:textColor="#9acd32"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_baseline_add_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
